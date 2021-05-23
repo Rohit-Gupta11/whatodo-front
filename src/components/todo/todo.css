@@ -1,0 +1,135 @@
+/*------------------main-------------------------------------*/
+.con-dash{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    background: rgba(253, 255, 157, 0.75);
+    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25),
+                4px 0px 4px rgba(0, 0, 0, 0.25),
+                0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px -4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+}
+
+/*------------------dashboard---------------------------------*/
+.headDash{
+    font-size: 2.8rem;
+    text-decoration: underline;
+    line-height: 4rem;
+    text-decoration-color: coral;
+    font-family: Pangolin;
+}
+
+.dashboard{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subdash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subdash input{
+    width: 100px;
+}
+
+/*------------------new todo-----------------------------------*/
+.newone{
+    display: flex;
+    flex-direction: column;
+    border: 2px dotted black;
+    font-family: Pangolin;
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 1rem;
+    width: 360px;
+    height: 347px;
+}
+
+.newone input, .newone textarea{
+    margin-bottom: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: .6px;
+}
+
+.newone input{
+    height: 2rem;
+    padding-left: .5rem;
+}
+
+.newone textarea{
+    padding: .5rem;    
+}
+
+.newone button{
+    background-color: #10F1BB;
+    border-color: #10F1BB;
+    height: 2rem;
+    font-family: Pangolin;
+    font-size: 1.4rem;
+}
+
+/*------------------todo list---------------------------------*/
+.todo-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px dotted black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: .5rem;
+    margin: .5rem;
+    font-size: 1.4rem;
+    line-height: 1.1rem;
+}
+
+.sub-list{
+    width: 70%;
+    word-wrap: break-word;
+}
+
+.todo-list p{
+    margin-top: .5rem;
+    font-size: 1.1rem;
+}
+
+.todo-list button{
+    background-color: rgb(255, 66, 66);
+    width: 191px;
+    height: 2rem;
+    font-family: Pangolin;
+    font-size: 1.4rem;
+}
+
+/*------------------responsiveness-----------------------------*/
+@media screen and (max-width: 1196px){
+    .dashboard{
+        width: 59%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .dashboard{
+        width: 55%;
+    }
+    .newone{
+        width: 294px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .dashboard{
+        width: 98%;
+    }
+    .todo-list button {
+        width: 128px;
+    }
+    .newone{
+        width: 100%;
+    }
+}

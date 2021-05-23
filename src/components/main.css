@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* ------------------- NavBar styles ------------------------ */
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 4em;
+    justify-content: space-between;
+    background: rgba(115, 228, 133, 0.92);
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.25);
+}
+.nav-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.logo-container{
+    width: 100%;
+    display: flex;
+}
+.logo{
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.8rem;
+    color: honeydew;
+}
+/* --------------------- Home styles ------------------------------ */
+.home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    background: rgba(253, 255, 157, 0.75);
+    border: 24px solid #F2994A;
+    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25),
+                4px 0px 4px rgba(0, 0, 0, 0.25),
+                0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px -4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+.hero-text .p1,.p2{
+    font-family: Pangolin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    line-height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.kids{
+    width: 25rem;
+    height: calc(1220px - 50em);
+    transform: rotate(-14.89deg);
+}
+.hero-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em auto ;
+}
+.hero-btn-home{
+    width: 251px;
+    background: #10F1BB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 52px;
+    font-family: Pangolin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFEFE;
+}
+.hero-btn-home:hover, .hero-btn-home:active{
+    cursor: pointer;
+    background-color: rgb(2, 214, 165);
+    box-shadow: none;
+}
+
+
+@media screen and (max-width: 767px){
+    .home{
+        flex-direction: column;
+        height: 77vh;
+        justify-content: space-evenly;
+    }
+    .kids{
+        width: 70%;
+        height: 50%;
+    }
+    .hero-text .p1, .p2{
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
