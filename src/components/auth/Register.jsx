@@ -5,7 +5,7 @@ import Axios from "axios";
 import { useState } from "react";
 
 const Register = () => {
-    const api_key = "https://whattodo-back.herokuapp.com/user/register";
+    const api_key = "https://api-whattodo.onrender.com/user/register";
 
     const [usernameReg, setUsernameReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
@@ -20,6 +20,7 @@ const Register = () => {
                 username: usernameReg,
                 password: passwordReg
             }).then((response) => {
+                console.log("register", response)
                 if (response.status === 200) {
                     history.push('/todo');
                 }
@@ -31,7 +32,7 @@ const Register = () => {
 
     // if user already logined, push to dashboard page
     useEffect(() => {
-        Axios.get("https://whattodo-back.herokuapp.com/user/login").then((response) => {
+        Axios.get("https://api-whattodo.onrender.com/user/login").then((response) => {
             if (response.data.loggedIn === true) {
                 history.push("/todo");
             }

@@ -5,7 +5,7 @@ import Axios from "axios";
 import { useHistory } from "react-router-dom";
 
 const Login = () => {
-    const api_key = "https://whattodo-back.herokuapp.com/user/login";
+    const api_key = "https://api-whattodo.onrender.com/user/login";
 
     const [usernameLog, setUsernameLog] = useState("");
     const [passwordLog, setPasswordLog] = useState("");
@@ -20,6 +20,7 @@ const Login = () => {
                 username: usernameLog,
                 password: passwordLog
             }).then((response) => {
+                console.log('login', response)
                 if (response.status === 200) {
                     history.push("/todo");
                 }
@@ -31,7 +32,7 @@ const Login = () => {
 
     // if user already logined, push to dashboard page
     useEffect(() => {
-        Axios.get("https://whattodo-back.herokuapp.com/user/login").then((response) => {
+        Axios.get("https://api-whattodo.onrender.com/user/login").then((response) => {
             if (response.data.loggedIn === true) {
                 history.push("/todo");
             }

@@ -16,7 +16,7 @@ const TodoIn = (props) => {
 
     function sendData() {
         if (title && description) {
-            Axios.post("https://whattodo-back.herokuapp.com/todo/create-todo", {
+            Axios.post("https://api-whattodo.onrender.com/todo/create-todo", {
                 userId: userId,
                 title: title,
                 description: description

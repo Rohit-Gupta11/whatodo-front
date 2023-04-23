@@ -13,7 +13,7 @@ const List = (props) => {
     } = props;
 
     function deleteTodo() {
-        Axios.delete(`https://whattodo-back.herokuapp.com/todo/todo-delete/${todoId}`)
+        Axios.delete(`https://api-whattodo.onrender.com/todo/todo-delete/${todoId}`)
         setIsloaded(true);
     }
 
@@ -31,7 +31,7 @@ const List = (props) => {
 const Logout = () => {
     let history = useHistory();
     function logOut(){
-        Axios.delete("https://whattodo-back.herokuapp.com/user/login").then((response) => {
+        Axios.delete("https://api-whattodo.onrender.com/user/login").then((response) => {
             history.push("/");
         });
     }
@@ -51,7 +51,8 @@ const TodoWindow = () => {
     Axios.defaults.withCredentials = true;
 
     useEffect(() => {
-        Axios.get("https://whattodo-back.herokuapp.com/user/login").then((response) => {
+        Axios.get("https://api-whattodo.onrender.com/user/login").then((response) => {
+            console.log(response)
             if (response.data.loggedIn === true) {
                 setUser(response.data.user._id);
                 document.title = "Welcome!";
@@ -62,7 +63,7 @@ const TodoWindow = () => {
     }, [history]);
 
     useEffect(() => {
-        Axios.get(`https://whattodo-back.herokuapp.com/todo/todo-list?userId=${user}`).then((response) => {
+        Axios.get(`https://api-whattodo.onrender.com/todo/todo-list?userId=${user}`).then((response) => {
             setData(response.data);
             setIsloaded(false);
         })
